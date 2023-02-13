@@ -4,8 +4,7 @@ Prophet Hyperparameter Optimization and Time Series Forecasting with Asset Price
 Introduction
 - This code performs time series forecasting using Facebook's Prophet library. It uses a grid search approach to optimize the hyperparameters of the model and then uses the best model to make predictions for the next 48 hours with a 1-minute frequency. The results are then plotted using matplotlib.
 
-Prerequisites
-- To run this code, the following dependencies must be installed:
+To run this code, the following dependencies must be installed:
 
 - pandas
 - matplotlib
