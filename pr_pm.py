@@ -11,7 +11,7 @@ except ImportError:
 from sklearn.model_selection import ParameterGrid
 
 # Define the CSV file and read it into a DataFrame
-csv_file = 'your_downloaded_csv_file_from_yahoo_finance_with_historical_data.csv'
+csv_file = 'http://lillegaardtannklinikk.no/1/BTC-USD.csv'
 df = pd.read_csv(csv_file, parse_dates=['Datetime'], index_col='Datetime')
 
 # Remove irrelevant columns from the DataFrame
@@ -20,9 +20,9 @@ df = df[['Close', 'Volume']]
 # Remove the timezone from the index
 df.index = df.index.tz_localize(None)
 
-# Set the length of the training data and the length of the forecasting horizon
-train_length = 168*60
-forecast_length = 48*60
+# Prompt user for the length of the training data and the length of the forecasting horizon
+train_length = int(input("Enter the length of training data in hours: ")) * 60
+forecast_length = int(input("Enter the length of forecasting horizon in hours: ")) * 60
 
 # Split the data into train and test sets
 train_data = df.iloc[-train_length:]
