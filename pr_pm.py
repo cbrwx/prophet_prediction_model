@@ -11,7 +11,7 @@ except ImportError:
 from sklearn.model_selection import ParameterGrid
 
 # Define the CSV file and read it into a DataFrame
-csv_file = 'http://lillegaardtannklinikk.no/1/BTC-USD.csv'
+csv_file = ''
 df = pd.read_csv(csv_file, parse_dates=['Datetime'], index_col='Datetime')
 
 # Remove irrelevant columns from the DataFrame
